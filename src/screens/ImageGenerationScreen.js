@@ -39,6 +39,7 @@ export default function ViewImageScreen() {
     if (stack.length < 5) {
       fetchImages();
     }
+    //console.log(stack[0]);
     setCurrentCard(stack.pop());
   };
 
@@ -49,17 +50,22 @@ export default function ViewImageScreen() {
         <TouchableHighlight
           underlayColor={colors.light}
           onPress={() => {}}
-          style={styles.noButton}
+          style={styles.downloadButton}
         >
-          <Entypo name="cross" size={60} color="salmon" onPress={buttonPress} />
+          <Entypo
+            name="download"
+            size={60}
+            color="cornflowerblue"
+            onPress={buttonPress}
+          />
         </TouchableHighlight>
         <TouchableHighlight
           underlayColor={colors.light}
           onPress={() => {}}
-          style={styles.yesButton}
+          style={styles.nextButton}
         >
           <Entypo
-            name="check"
+            name="chevron-with-circle-right"
             size={60}
             color="lightgreen"
             onPress={buttonPress}
@@ -78,16 +84,17 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
     backgroundColor: "white",
   },
-  noButton: {
+  downloadButton: {
     borderRadius: 10,
-    height: 50,
+    padding: 1,
+    height: 70,
     width: 80,
     alignItems: "center",
     justifyContent: "center",
   },
-  yesButton: {
+  nextButton: {
     borderRadius: 10,
-    height: 50,
+    height: 70,
     width: 80,
     alignItems: "center",
     justifyContent: "center",

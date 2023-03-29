@@ -1,4 +1,4 @@
-import { StyleSheet, View, Image, TouchableHighlight } from "react-native";
+import { StyleSheet, View, Image } from "react-native";
 import React from "react";
 
 export default function AppCard({ url }) {
